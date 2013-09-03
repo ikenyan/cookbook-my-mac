@@ -40,6 +40,12 @@ dmg_package "KeyRemap4MacBook" do
   action :install
 end
 
+dmg_package "ClipMenu" do
+  volumes_dir "ClipMenu"
+  source "https://dl.dropboxusercontent.com/u/1140644/clipmenu/ClipMenu_0.4.3.dmg"
+  action :install
+end
+
 dmg_package "Dropbox" do
   volumes_dir "Dropbox Installer"
   source "http://www.dropbox.com/download?plat=mac"
