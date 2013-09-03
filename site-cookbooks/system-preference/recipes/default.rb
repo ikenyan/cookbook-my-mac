@@ -23,6 +23,14 @@ template "com.apple.spotlight.plist" do
   path "/Users/" + node["username"] + "/Library/Preferences/com.apple.spotlight.plist"
 end
 
+template "com.apple.menuextra.clock.plist" do
+  path "/Users/" + node["username"] + "/Library/Preferences/com.apple.menuextra.clock.plist"
+end
+
+template "com.apple.symbolichotkeys.plist" do
+  path "/Users/" + node["username"] + "/Library/Preferences/com.apple.symbolichotkeys.plist"
+end
+
 template "com.apple.Terminal.plist" do
   path "/Users/" + node["username"] + "/Library/Preferences/com.apple.Terminal.plist"
 end
