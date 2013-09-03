@@ -54,7 +54,7 @@ dmg_package "Dropbox" do
 end
 
 dmg_package "Emacs" do
-  volumes_dir "Emacs Installer"
+  volumes_dir "Emacs"
   source "http://bandwidth.porkrind.org/emacs-builds/Emacs-24.3-universal-10.6.8.dmg"
   action :install
 end
@@ -73,7 +73,7 @@ bash "Download 1Password" do
 end
 
 bash "Download Transmit" do
-  user node["user"]["name"]
+  user node["username"]
   group "staff"
   cwd "/Applications"  
   code <<-EOC
@@ -86,7 +86,7 @@ bash "Download Transmit" do
 end
 
 bash "Download Stay" do
-  user node["user"]["name"]
+  user node["username"]
   group "staff"
   cwd "/Applications"  
   code <<-EOC
@@ -99,7 +99,7 @@ bash "Download Stay" do
 end
 
 bash "Download TextMate" do
-  user node["user"]["name"]
+  user node["username"]
   group "staff"
   cwd "/Applications"  
   code <<-EOC
@@ -112,7 +112,7 @@ bash "Download TextMate" do
 end
 
 bash "Download Tower" do
-  user node["user"]["name"]
+  user node["username"]
   group "staff"
   cwd "/Applications"  
   code <<-EOC

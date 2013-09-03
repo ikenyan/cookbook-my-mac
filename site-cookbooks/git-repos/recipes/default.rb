@@ -48,7 +48,7 @@ git "/Users/" + node["username"] + "/proj/private/hataraki" do
 end
 
 git "/Users/" + node["username"] + "/proj/private/namespace_advance.js" do
-  repository "https://github.com/satoshi-takano/namespace_advance.git"
+  repository "https://github.com/satoshi-takano/namespace_advance.js.git"
   reference "master"
   user node["username"]
   group "staff"

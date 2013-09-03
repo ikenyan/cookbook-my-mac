@@ -2,9 +2,7 @@ SITE
   remote: http://community.opscode.com/api/v1
   specs:
     dmg (2.0.0)
-    mac_os_x (1.4.2)
 
 DEPENDENCIES
   dmg (>= 0)
-  mac_os_x (>= 0)
 

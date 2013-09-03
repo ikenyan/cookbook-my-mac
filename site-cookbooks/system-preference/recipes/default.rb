@@ -43,6 +43,10 @@ template "org.pqrs.KeyRemap4MacBook.plist" do
   path "/Users/" + node["username"] + "/Library/Preferences/org.pqrs.KeyRemap4MacBook.plist"
 end
 
+template "com.manytricks.Moom.plist" do
+  path "/Users/" + node["username"] + "/Library/Preferences/com.manytricks.Moom.plist"
+end
+
 bash "Apply preferences" do
   user node["username"]
   code <<-EOH
