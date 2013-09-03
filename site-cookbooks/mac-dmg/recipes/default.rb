@@ -60,7 +60,7 @@ dmg_package "Emacs" do
 end
 
 bash "Download 1Password" do
-  user node["user"]["name"]
+  user node["username"]
   group "staff"
   cwd "/Applications"
   code <<-EOC
@@ -111,6 +111,7 @@ bash "Download TextMate" do
   creates "/Applications/TextMate.app"
 end
 
+=begin
 bash "Download Tower" do
   user node["username"]
   group "staff"
@@ -123,3 +124,4 @@ bash "Download Tower" do
   EOC
   creates "/Applications/Tower.app"
 end
+=end
