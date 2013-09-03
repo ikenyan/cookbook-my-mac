@@ -54,7 +54,8 @@ dmg_package "Emacs" do
 end
 
 bash "Download 1Password" do
-  user "root"
+  user node["user"]["name"]
+  group "staff"
   cwd "/Applications"
   code <<-EOC
     curl -O https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-3.8.21.zip
@@ -66,7 +67,8 @@ bash "Download 1Password" do
 end
 
 bash "Download Transmit" do
-  user "root"
+  user node["user"]["name"]
+  group "staff"
   cwd "/Applications"  
   code <<-EOC
     curl -O http://www.panic.com/transmit/d/Transmit%204.4.1.zip
@@ -78,7 +80,8 @@ bash "Download Transmit" do
 end
 
 bash "Download Stay" do
-  user "root"
+  user node["user"]["name"]
+  group "staff"
   cwd "/Applications"  
   code <<-EOC
     curl -O http://cordlessdog.com/stay/versions/Stay%201.2.2.zip
@@ -90,7 +93,8 @@ bash "Download Stay" do
 end
 
 bash "Download TextMate" do
-  user "root"
+  user node["user"]["name"]
+  group "staff"
   cwd "/Applications"  
   code <<-EOC
     curl -O http://archive.textmate.org/TextMate_1.5.11_r1635.zip
@@ -102,7 +106,8 @@ bash "Download TextMate" do
 end
 
 bash "Download Tower" do
-  user "root"
+  user node["user"]["name"]
+  group "staff"
   cwd "/Applications"  
   code <<-EOC
     curl -O https://macapps.fournova.com/tower1-1060/download -o Tower.zip
