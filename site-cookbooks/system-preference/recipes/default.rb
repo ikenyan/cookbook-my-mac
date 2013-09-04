@@ -61,3 +61,10 @@ bash "Apply preferences" do
     killall Dock
   EOH
 end
+
+bash "bash preference" do
+  cwd "/Users/" + node["username"]
+  code <<-EOH
+    echo 'export PS1="[\w]\$ "' >> .bash_profile
+  EOH
+end
