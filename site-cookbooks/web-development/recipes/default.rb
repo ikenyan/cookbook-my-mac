@@ -37,3 +37,19 @@ bash "Install rbenv" do
 
   not_if "which rbenv"
 end
+
+
+bash "Download JsTestDriver" do
+  user node["username"]
+  group "staff"
+  cwd "/Users/" + node["username"] + "/java"
+  code <<-EOC
+    curl -O https://js-test-driver.googlecode.com/files/JsTestDriver-1.3.5.jar
+    echo 'export JSTESTDRIVER_HOME="$HOME/java"' >> ../.bash_profile
+  EOC
+  creates "JsTestDriver-1.3.5.jar"
+end
+
+gem_package "jstdutil" do
+  action :install
+end

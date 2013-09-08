@@ -38,3 +38,11 @@ directory "/Users/" + node["username"] + "/proj/private" do
   recursive true
   action :create
 end
+
+directory "/Users/" + node["username"] + "/java" do
+  owner node["username"]
+  group "staff"
+  mode 0775
+  recursive true
+  action :create
+end
