@@ -65,6 +65,7 @@ end
 bash "bash preference" do
   cwd "/Users/" + node["username"]
   code <<-EOH
+    chmod 664 .bash_profile
     echo 'export PS1="[\w]\$ "' >> .bash_profile
   EOH
 end

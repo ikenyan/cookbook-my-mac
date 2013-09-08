@@ -40,8 +40,6 @@ end
 
 
 bash "Download JsTestDriver" do
-  user node["username"]
-  group "staff"
   cwd "/Users/" + node["username"] + "/java"
   code <<-EOC
     curl -O https://js-test-driver.googlecode.com/files/JsTestDriver-1.3.5.jar
