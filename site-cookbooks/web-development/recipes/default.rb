@@ -33,6 +33,7 @@ bash "Install rbenv" do
   code <<-EOH
     sudo ./install.sh
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ../../../.bash_profile
+    source ../../../.bash_profile
   EOH
 
   not_if "which rbenv"
