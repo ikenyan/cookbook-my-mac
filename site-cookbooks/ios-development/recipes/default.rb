@@ -11,5 +11,5 @@ gem_package "cocoapods" do
 end
 
 template "com.apple.Xcode.plist" do
-  path "/Users/" + node["username"] + "/Library/Preferences/com.apple.Xcode.plist"
+  path "/Users/" + node["username"] + "/Library/Preferences/com.apple.dt.Xcode.plist"
 end
