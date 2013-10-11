@@ -69,3 +69,13 @@ bash "bash preference" do
     echo 'export PS1="[\w]\$ "' >> .bash_profile
   EOH
 end
+
+bash "git config" do
+  code <<-EOH
+    git config --global core.editor emacs
+    git config --global color.ui true
+    git config --global alias.st "status"
+    git config --global alias.ci "commit"
+    git config --global alias.co "checkout"
+  EOH
+end

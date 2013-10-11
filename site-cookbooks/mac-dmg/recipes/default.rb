@@ -13,6 +13,12 @@ dmg_package "TotalFinder" do
   type "pkg"
 end
 
+dmg_package "SourceTree" do
+    volumes_dir "SourceTree"
+    source "http://downloads.atlassian.com/software/sourcetree/SourceTree_1.7.3.dmg"
+    type "pkg"
+end
+
 dmg_package "Google Chrome" do
   dmg_name "googlechrome"
   source "https://dl-ssl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg"
